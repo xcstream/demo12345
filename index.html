@@ -1,0 +1,30 @@
+<html>
+
+<body>
+	<video id="vid" class="video"  autoplay="true"
+	    poster="video-main-poster.jpg"
+	    style="height: 600px; width: 800px;">
+	        <source type="video/mp4" src="video-intro.mp4">
+	        <source type="video/webm" src="video-intro.webm">
+	</video>
+</body>
+
+<script type="text/javascript">
+
+var pauseAt = 2
+var vid = document.getElementById('vid')
+
+var intv = setInterval(timer,200)
+function timer(){
+	if(vid.currentTime>=pauseAt){
+		clearInterval(intv)
+		vid.pause()
+		confirm('yes or no')
+		vid.play()
+
+	}
+}
+</script>
+
+</html>
+
